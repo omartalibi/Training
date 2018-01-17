@@ -9,6 +9,7 @@ public class FizzBuzzStream {
     public static String fizzBuzz(final int number) {
         List<String> result;
 
+        //Junit 5/5
         result = Arrays.asList(number).stream()
                 .map(nb ->  {
                     if(FizzBuzzSimple.isDivisble(nb, 15))

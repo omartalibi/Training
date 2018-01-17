@@ -3,6 +3,8 @@ package kata.fizzbuzz;
 public class FizzBuzzRecursive {
 
     public static String fizzBuzz(final int number) {
+
+        //Junit : 4/5
         int tmp;
         if(number % 3 == 0){
             tmp = number;
