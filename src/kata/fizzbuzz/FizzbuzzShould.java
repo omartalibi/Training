@@ -1,9 +1,5 @@
 package kata.fizzbuzz;
 
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-
 public class FizzbuzzShould {
 
     @Test
