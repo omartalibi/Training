@@ -11,10 +11,13 @@ public class FizzBuzzStream {
 
         result = Arrays.asList(number).stream()
                 .map(nb ->  {
-                    if(nb%3==0){
+                    if(FizzBuzzSimple.isDivisble(nb, 15))
+                        return "fizzBuzz";
+                    if(FizzBuzzSimple.isDivisble(nb, 3))
                         return "Fizz";
-                    }
-                    return "Buzz";
+                    if(FizzBuzzSimple.isDivisble(nb, 5))
+                        return "Buzz";
+                    return String.valueOf(nb);
                 })
                 .collect(Collectors.toList());
 
