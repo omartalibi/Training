@@ -13,5 +13,11 @@ public class test {
 
             System.out.println(day);
 
+            final StringBuilder resultAccumulator = new StringBuilder();
+            resultAccumulator.append("tt");
+            resultAccumulator.append("rr");
+          System.out.println(resultAccumulator.toString());
+
+
     }
 }
