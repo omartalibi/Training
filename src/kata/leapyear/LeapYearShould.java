@@ -19,9 +19,5 @@ public class LeapYearShould {
     public void typical_common_year_when_divisible_by_4_and_100_but_not_divisible_by_400(){
         assertEquals("typical common year", LeapYearSimple.leapyear(1000));
     }
-
-    @Test
-    public void typical_common_year_when_divisible_by_4_but_not_100(){
-        assertEquals("typical common year", LeapYearSimple.leapyear(1996));
-    }
+    
 }
