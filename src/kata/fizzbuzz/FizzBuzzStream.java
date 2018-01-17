@@ -12,7 +12,7 @@ public class FizzBuzzStream {
         result = Arrays.asList(number).stream()
                 .map(nb ->  {
                     if(FizzBuzzSimple.isDivisble(nb, 15))
-                        return "fizzBuzz";
+                        return "FizzBuzz";
                     if(FizzBuzzSimple.isDivisble(nb, 3))
                         return "Fizz";
                     if(FizzBuzzSimple.isDivisble(nb, 5))
