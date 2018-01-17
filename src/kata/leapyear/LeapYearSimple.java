@@ -5,17 +5,17 @@ public class LeapYearSimple {
         return number % divisor == 0;
     }
 
-    public static String leapyear(final int year) {
+    public static boolean leapyear(final int year) {
 
         if (isDivisble(year,4)) {
             if(isDivisble(year,100) && isDivisble(year,400) || !isDivisble(year,100))
-                return "leap year";
+                return true;
             else
-                return "typical common year";
+                return false;
 
         }
         else
-            return "typical common year";
+            return false;
 
     }
 }
