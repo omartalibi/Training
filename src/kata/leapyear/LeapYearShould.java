@@ -10,6 +10,7 @@ public class LeapYearShould {
             assertEquals("leap year", LeapYearSimple.leapyear(1992));
     }
 
+    @Test
     public void typical_common_year_when_not_divisble_by_4(){
         assertEquals("typical common year", LeapYearSimple.leapyear(2017));
     }
