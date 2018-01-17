@@ -1,1 +1,1 @@
-# FizzBuzz
+# Training
