@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class LeapYearShould {
 
     @Test
-    public void leap_year_when_divisible_by_4_and_neither_divisible_by_100_nor_400(){
+    public void leap_year_when_divisible_by_4(){
             assertEquals("leap year", LeapYearSimple.leapyear(1992));
     }
 
@@ -16,7 +16,9 @@ public class LeapYearShould {
     }
 
     @Test
-    public void leap_year_when_divisible_by_4_and_100_and_400(){
-        assertEquals("leap year", LeapYearSimple.leapyear(2000));
+    public void typical_common_year_when_divisible_by_4_and_100_but_not_divisible_by_400(){
+        assertEquals("typical common year", LeapYearSimple.leapyear(1000));
     }
+
+
 }
