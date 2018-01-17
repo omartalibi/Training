@@ -7,23 +7,21 @@ import static org.junit.Assert.assertEquals;
 public class FizzbuzzShould {
 
     @Test
-    public void fizz_when_divisible_by_3() {
-        assertEquals("Fizz", FizzBuzzOpenClosed.fizzBuzz(3));
+    public void fizz_when_divisible_by_3() { assertEquals("Fizz", FizzBuzzStream.fizzBuzz(3));
     }
 
     @Test
-    public void buzz_when_divisible_by_5() {
-        assertEquals("Buzz", FizzBuzzOpenClosed.fizzBuzz(5));
+    public void buzz_when_divisible_by_5() { assertEquals("Buzz", FizzBuzzStream.fizzBuzz(5));
     }
 
     @Test
     public void fizzbuzz_when_divisible_by_3_and_5() {
-        assertEquals("fizzBuzz", FizzBuzzOpenClosed.fizzBuzz(15));
+        assertEquals("fizzBuzz", FizzBuzzStream.fizzBuzz(15));
     }
 
     @Test
     public void returns_value_otherwise() {
-        assertEquals("1", FizzBuzzOpenClosed.fizzBuzz(1));
+        assertEquals("1", FizzBuzzStream.fizzBuzz(1));
     }
 
     /*

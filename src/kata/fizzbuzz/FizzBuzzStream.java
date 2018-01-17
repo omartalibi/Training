@@ -5,17 +5,18 @@ import java.util.stream.*;
 
 public class FizzBuzzStream {
 
-    public static String fizzBuzz(final int number) {
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(number);
 
+    public static String fizzBuzz(final int number) {
         List<String> result;
 
-        result = numbers.stream()
-                .filter(nb -> nb % 3 == 0)
-                .map(nb -> "Fizz")
+        result = Arrays.asList(number).stream()
+                .map(nb ->  {
+                    if(nb%3==0){
+                        return "Fizz";
+                    }
+                    return "Buzz";
+                })
                 .collect(Collectors.toList());
-
 
 
         if(result.isEmpty())
