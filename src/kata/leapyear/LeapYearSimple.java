@@ -6,16 +6,11 @@ public class LeapYearSimple {
     }
 
     public static boolean leapyear(final int year) {
-
+        boolean result = false;
         if (isDivisble(year,4)) {
             if(isDivisble(year,100) && isDivisble(year,400) || !isDivisble(year,100))
-                return true;
-            else
-                return false;
-
+                result=true;
         }
-        else
-            return false;
-
+        return result;
     }
 }

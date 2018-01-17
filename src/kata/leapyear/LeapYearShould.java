@@ -22,12 +22,12 @@ public class LeapYearShould {
 
     @Test
     public void typical_common_year_when_divisible_by_4_and_100_but_not_divisible_by_400(){
-            assertFalse(LeapYearSimple.leapyear(1000));
+            assertFalse(LeapYearSimple.leapyear(3000));
     }
 
     @Test
     public void forAllNumbers() {
-        for (int i = 1; i < 3000; i++) {
+        for (int i = 1852; i < 10000; i++) {
             assertEquals(LeapYearSimple.leapyear(i), new GregorianCalendar().isLeapYear(i));
         }
     }
