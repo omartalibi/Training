@@ -15,4 +15,9 @@ public class LeapYearShould {
     public void atypical_leap_year(){
         assertEquals("atypical leap year", LeapYearSimple.leapyear(2000));
     }
+
+    @Test
+    public void typical_common_year(){
+        assertEquals("typical common year", LeapYearSimple.leapyear(2001));
+    }
 }
