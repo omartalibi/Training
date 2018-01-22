@@ -4,7 +4,6 @@ public class LeapYearSimple {
 
     public static boolean leapyear(final int year) {
 
-
         return true;
     }
 
