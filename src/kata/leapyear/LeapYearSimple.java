@@ -8,7 +8,7 @@ public class LeapYearSimple {
                 return "atypical leap year";
             else
                 return "typical leap year";
-        return "other stuff";
+        return "typical common year";
     }
 
     static boolean isDivisble(long number, int divisor) {
