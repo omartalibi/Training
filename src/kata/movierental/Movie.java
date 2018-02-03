@@ -1,30 +1,33 @@
 package kata.movierental;
 
+import kata.fizzbuzz.FizzBuzzOpenClosed;
+
 public class Movie {
 
-    public static final int CHILDRENS = 2;
-    public static final int NEW_RELEASE = 1;
-    public static final int REGULAR = 0;
-
     private String _title;
-    private int _priceCode;
+    private MovieCategorie movieCategorie;
 
-    public Movie(String title, int priceCode) {
-        _title = title;
-        _priceCode = priceCode;
+    public Movie(Name name, MovieCategorie movieCategorie) {
+        _title = name.toString();
+        this.movieCategorie = movieCategorie;
     }
 
-    public int getPriceCode() {
-        return _priceCode;
+    public MovieCategorie getMovieCategorie(){
+        return movieCategorie;
     }
 
-    public void setPriceCode(int arg) {
-        _priceCode = arg;
+    public double getMovieInitialPrice() throws Exception {
+        for (final MovieCategorie movieCategorie : MovieCategorie.values()) {
+            if (movieCategorie == this.movieCategorie) {
+                return movieCategorie.getMoviePrice();
+            }
+        }
+
+
+        throw new Exception("Error");
     }
 
     public String getTitle() {
         return _title;
     }
-
-
 }

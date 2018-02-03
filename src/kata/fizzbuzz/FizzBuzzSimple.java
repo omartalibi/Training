@@ -1,5 +1,8 @@
 package kata.fizzbuzz;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzSimple {
 
     public static String fizzBuzz(final long number) {
@@ -14,7 +17,6 @@ public class FizzBuzzSimple {
         }
         return Long.toString(number);
     }
-
 
     static boolean isDivisble(long number, int divisor) {
         return number % divisor == 0;
