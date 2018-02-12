@@ -8,6 +8,12 @@ public class Rental {
     private Movie _movie;
     private DayRented _daysRented;
 
+
+    public static Rental rental(final Movie movie, final DayRented daysRented) {
+        Rental rental = new Rental(movie, daysRented);
+        return rental;
+    }
+
     public Rental(Movie movie, DayRented daysRented) {
         _movie = movie;
         _daysRented = daysRented;
@@ -17,27 +23,21 @@ public class Rental {
         return _daysRented.getDayRented();
     }
 
+    public String getTitle() {
+        return _movie.getTitle();
+    }
+
     public Movie getMovie() {
         return _movie;
     }
 
-    public double MovieRentPrice() throws Exception {
-        double thisAmount = _movie.getMovieInitialPrice();
-
-        switch (this._movie.getMovieCategorie()) {
-            case regular:
-                if (this.getDaysRented() > 2)
-                    thisAmount += (this.getDaysRented() - 2) * 1.5;
-                break;
-            case new_release:
-                thisAmount += this.getDaysRented() * 3;
-                break;
-            case children:
-                if (this.getDaysRented() > 3)
-                    thisAmount += (this.getDaysRented() - 3) * 1.5;
-                break;
-        }
-
-        return thisAmount;
+    public double charge() {
+        return _movie.getMovieCategorie().chargeFor(getDaysRented());
     }
+
+    public int frequentPoints(){
+        return _movie.getMovieCategorie().frequentPoints(getDaysRented());
+
+    }
+
 }

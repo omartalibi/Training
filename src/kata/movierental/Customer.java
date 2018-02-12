@@ -5,10 +5,19 @@ import java.util.List;
 
 public class Customer {
 
-    private String _name;
+    private Name _name;
     private List<Rental> _rentals = new ArrayList<Rental>();
 
-    public Customer(String name) {
+    public static Customer customer(final Name name, final Rental... rentals) {
+        Customer customer = new Customer(name);
+        for (Rental rental : rentals) {
+            customer.addRental(rental);
+        }
+        return customer;
+    }
+
+
+    public Customer(Name name) {
         _name = name;
     }
 
@@ -16,36 +25,29 @@ public class Customer {
         _rentals.add(arg);
     }
 
-    public String getName() {
+    public Name getName() {
         return _name;
     }
 
     public String statement() throws Exception {
-        double totalAmount = 0;
-        int frequentRenterPoints = 0;
         String result = "Rental Record for " + getName() + "\n";
-
-        for (Rental each : _rentals) {
-            double thisAmount = 0;
-
-            //determine amounts for each line
-            thisAmount=each.MovieRentPrice();
-
-            // add frequent renter points
-            frequentRenterPoints++;
-            // add bonus for a two day new release rental
-            if ((each.getMovie().getMovieCategorie() == MovieCategorie.new_release) && each.getDaysRented() > 1)
-                frequentRenterPoints++;
-
-            // show figures for this rental
-            result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
+        for (Rental rental : _rentals) {
+            result += "\t" + rental.getTitle() + "\t" + String.valueOf(rental.charge()) + "\n";
         }
-
-        // add footer lines
-        result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
-
+        result += "Amount owed is " + String.valueOf(getTotalAmount()) + "\n";
+        result += "You earned " + String.valueOf(getFrequentRenterPoints()) + " frequent renter points";
         return result;
+    }
+
+    private int getFrequentRenterPoints() {
+        int frequentRenterPoints = 0;
+        for (Rental rental : _rentals) {
+            frequentRenterPoints = rental.frequentPoints();
+        }
+        return frequentRenterPoints;
+    }
+
+    private double getTotalAmount() {
+        return _rentals.stream().mapToDouble(Rental::charge).sum();
     }
 }
