@@ -1,30 +1,28 @@
 package kata.movierental;
 
-import kata.fizzbuzz.FizzBuzzOpenClosed;
-
 public class Movie {
 
     private String _title;
-    private MovieCategorie movieCategorie;
+    private MovieCategories movieCategories;
 
-    public static Movie movie(Name name, MovieCategorie movieCategorie){
-        Movie movie = new Movie(name, movieCategorie);
+    public static Movie movie(Name name, MovieCategories movieCategories){
+        Movie movie = new Movie(name, movieCategories);
         return movie;
     }
 
-    public Movie(Name name, MovieCategorie movieCategorie) {
+    public Movie(Name name, MovieCategories movieCategories) {
         _title = name.toString();
-        this.movieCategorie = movieCategorie;
+        this.movieCategories = movieCategories;
     }
 
-    public MovieCategorie getMovieCategorie(){
-        return movieCategorie;
+    public MovieCategories getMovieCategories(){
+        return movieCategories;
     }
 
     public double getMovieInitialPrice()  {
-        for (final MovieCategorie movieCategorie : MovieCategorie.values()) {
-            if (movieCategorie == this.movieCategorie) {
-                return movieCategorie.getMoviePrice();
+        for (final MovieCategories movieCategories : MovieCategories.values()) {
+            if (movieCategories == this.movieCategories) {
+                return movieCategories.getMoviePrice();
             }
         }
         return 0;
@@ -34,7 +32,7 @@ public class Movie {
         //return getMovieCategorie().chargeFor(dayRented);
         double thisAmount = getMovieInitialPrice();
 
-        switch (this.getMovieCategorie()) {
+        switch (this.getMovieCategories()) {
             case regular:
                 if (dayRented > 2)
                     thisAmount += (dayRented - 2) * 1.5;

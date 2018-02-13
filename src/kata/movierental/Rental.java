@@ -32,11 +32,11 @@ public class Rental {
     }
 
     public double charge() {
-        return _movie.getMovieCategorie().chargeFor(getDaysRented());
+        return _movie.getMovieCategories().chargeFor(getDaysRented());
     }
 
     public int frequentPoints(){
-        return _movie.getMovieCategorie().frequentPoints(getDaysRented());
+        return _movie.getMovieCategories().frequentPoints(getDaysRented());
 
     }
 
