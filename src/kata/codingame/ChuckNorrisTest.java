@@ -12,7 +12,7 @@ public class ChuckNorrisTest {
 
     @Test
     public void ChuckNorris_with_character_B(){
-        Assert.assertEquals("K", ChuckNorris.chuckNorris("B"));
+        Assert.assertEquals("0 0 00 0000 0 0 00 0", ChuckNorris.chuckNorris("B"));
     }
 
     @Test

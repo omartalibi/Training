@@ -4,49 +4,52 @@ import java.util.Scanner;
 
 public class ChuckNorris {
 
-    public static String chuckNorris(String message) {
+    public static StringBuilder chuckNorris(String message) {
         StringBuilder binaryValueMessage = new StringBuilder();
         StringBuilder res = new StringBuilder();
-        String resf="NULL";
+        String resf = "NULL";
         int n = 1;
+        int m = 0;
 
         for (char lettre : message.toCharArray()) {
             int asciival = (int) lettre;
-
             binaryValueMessage.append(Integer.toBinaryString(asciival));
 
-            char t = binaryValueMessage.charAt(0);
 
-            for (char bit : binaryValueMessage.substring(1, binaryValueMessage.length()).toCharArray()) {
-                if (t == bit)
+            char[] tab = binaryValueMessage.substring(0, binaryValueMessage.length()).toCharArray();
+            int nbElements = tab.length;
+            int indice = 1;
+
+            while (indice < nbElements) {
+                char r = tab[indice];
+                if (r == tab[indice - 1])
                     n = n + 1;
-                if(t!= bit || bit == binaryValueMessage.charAt(binaryValueMessage.length() - 1)){
-                    if (t == '0')
+                else {
+                    if (r == '0')
                         res.append("00 ");
                     else
                         res.append("0 ");
-
-                    for (int i = 0; i < n; i++) {
-                        res.append("0");
-                    }
-
-                    n = 1;
-                    t = bit;
-
-                    res.append(" ");
                 }
+
+                for (int i = 0; i < n; i++) {
+                    res.append("0");
+                }
+
+                indice = indice + 1;
+                n = 1;
+
+                res.append(" ");
             }
-            resf = res.substring(0, res.length() - 1);
         }
-        return resf;
+        return res;
     }
 
-    public static void main(String[] args) {
-        System.out.print("Enter a character : ");
+        public static void main (String[]args){
+            System.out.print("Enter a character : ");
 
-        Scanner sc = new Scanner(System.in);
-        String msg = sc.nextLine();
+            Scanner sc = new Scanner(System.in);
+            String msg = sc.nextLine();
 
-        System.out.println(chuckNorris(msg));
+            System.out.println(chuckNorris(msg));
+        }
     }
-}
