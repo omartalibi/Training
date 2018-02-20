@@ -20,4 +20,9 @@ public class ChuckNorrisTest {
         Assert.assertEquals("0 0 00 0000 0 000 00 0000 0 00", ChuckNorris.chuckNorris("CC"));
     }
 
+    @Test
+    public void ChuckNorris_with_character_ABC(){
+        Assert.assertEquals("0 0 00 00000 0 00 00 0000 0 0 00 0 0 0 00 0000 0 00", ChuckNorris.chuckNorris("ABC"));
+    }
+
 }
