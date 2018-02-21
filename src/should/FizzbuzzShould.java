@@ -1,12 +1,14 @@
-package kata.fizzbuzz;
+package should;
 
+import kata.fizzbuzz.FizzBuzzStream;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class FizzbuzzShould {
 
     @Test
-    public void fizz_when_divisible_by_3() { assertEquals("Fizz", FizzBuzzStream.fizzBuzz(3));
+    public void fizz_when_divisible_by_3() { Assert.assertEquals("Fizz", FizzBuzzStream.fizzBuzz(3));
     }
 
     @Test

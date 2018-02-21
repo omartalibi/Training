@@ -1,3 +1,5 @@
+package should;
+
 import kata.movierental.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,7 +10,7 @@ import static kata.movierental.Movie.movie;
 import static kata.movierental.Name.name;
 import static kata.movierental.Rental.rental;
 
-public class CustomerTest {
+public class CustomerShould {
     //TODO make test for price breaks in code.
 
     @Test

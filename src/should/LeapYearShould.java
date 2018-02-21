@@ -1,5 +1,7 @@
-package kata.leapyear;
+package should;
 
+import kata.leapyear.LeapYearSimple;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -8,7 +10,7 @@ public class LeapYearShould {
 
     @Test
     public void typical_leap_year(){
-        assertEquals("typical leap year", LeapYearSimple.leapyear(1996));
+        Assert.assertEquals("typical leap year", LeapYearSimple.leapyear(1996));
     }
 
     @Test
