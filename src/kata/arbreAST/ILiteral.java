@@ -1,5 +1,5 @@
 package kata.arbreAST;
 
-public interface ILiteral {
+public interface ILiteral extends IAST {
     public int getValue();
 }
