@@ -14,6 +14,6 @@ public class ASTCalculation {
             render((AST) ((IOperator) ast).getFG());
 
         }
-        return null;
+        return res;
     }
 }
