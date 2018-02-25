@@ -1,8 +1,8 @@
 package should;
 
-import kata.arbreAST.Solution2.AST;
 import kata.arbreAST.Solution2.ASTCalculation;
-import org.junit.Assert;
+import kata.arbreAST.Solution2.ASTLiteral;
+import kata.arbreAST.Solution2.ASTOperator;
 import org.junit.Test;
 
 public class ASTShould {
@@ -10,13 +10,13 @@ public class ASTShould {
 
     @Test
     public void test(){
-        AST ast = new AST();
-        ast.setValue("+");
+        ASTOperator ast = new ASTOperator();
+        ast.setSymbole("+");
 
-        AST filsDroit = new AST();
-        filsDroit.setValue("1");
+        ASTLiteral filsDroit = new ASTLiteral();
+        filsDroit.setValue("3");
 
-        AST filsGauche = new AST();
+        ASTLiteral filsGauche = new ASTLiteral();
         filsGauche.setValue("2");
 
         ast.setFD(filsDroit);
