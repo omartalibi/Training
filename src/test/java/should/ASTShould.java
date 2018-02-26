@@ -10,18 +10,18 @@ public class ASTShould {
 
     @Test
     public void test(){
-        ASTOperator ast = new ASTOperator();
-        ast.setSymbole("+");
 
-        ASTLiteral filsDroit = new ASTLiteral();
-        filsDroit.setValue("3");
+        ASTLiteral FD = new ASTLiteral("3");
 
-        ASTLiteral filsGauche = new ASTLiteral();
-        filsGauche.setValue("2");
 
-        ast.setFD(filsDroit);
-        ast.setFG(filsGauche);
+        ASTLiteral FGG = new ASTLiteral("4");
+        ASTLiteral FDD = new ASTLiteral("7");
+        ASTOperator astOperatorG = new ASTOperator(FGG, FDD, "-");
 
-        System.out.println(ASTCalculation.render(ast));
+
+        ASTOperator ast = new ASTOperator(astOperatorG, FD,"+");
+
+
+        ASTCalculation.compute(ast);
     }
 }

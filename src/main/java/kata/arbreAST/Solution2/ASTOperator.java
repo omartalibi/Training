@@ -5,6 +5,12 @@ public class ASTOperator implements IOperator {
     private IAST FD;
     private String symbole;
 
+    public ASTOperator(IAST FG, IAST FD, String symbole) {
+        this.FG = FG;
+        this.FD = FD;
+        this.symbole = symbole;
+    }
+
     @Override
     public IAST getFG() {
         return FG;
@@ -20,15 +26,4 @@ public class ASTOperator implements IOperator {
         return symbole;
     }
 
-    public void setFG(IAST FG) {
-        this.FG = FG;
-    }
-
-    public void setFD(IAST FD) {
-        this.FD = FD;
-    }
-
-    public void setSymbole(String symbole) {
-        this.symbole = symbole;
-    }
 }
