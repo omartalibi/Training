@@ -1,4 +1,4 @@
-package IPRO.client;
+package IPRO.cours.client;
 
 public class Client {
 

@@ -1,4 +1,4 @@
-package IPRO.stock;
+package IPRO.cours.stock;
 
 public class Lot implements Sellable{
     private String name;

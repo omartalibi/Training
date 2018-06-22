@@ -1,11 +1,11 @@
-package IPRO.test;
+package IPRO.cours.test;
 
-import IPRO.bills.Bill;
-import IPRO.client.Client;
-import IPRO.stock.Couleur;
-import IPRO.stock.Lot;
-import IPRO.stock.Ream;
-import IPRO.stock.Stylo;
+import IPRO.cours.client.Client;
+import IPRO.cours.bills.Bill;
+import IPRO.cours.stock.Couleur;
+import IPRO.cours.stock.Lot;
+import IPRO.cours.stock.Ream;
+import IPRO.cours.stock.Stylo;
 
 public class main {
     public static void main(String[] args) {

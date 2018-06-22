@@ -1,7 +1,7 @@
-package IPRO.bills;
+package IPRO.cours.bills;
 
-import IPRO.client.Client;
-import IPRO.stock.Sellable;
+import IPRO.cours.client.Client;
+import IPRO.cours.stock.Sellable;
 
 import java.util.ArrayList;
 import java.util.List;

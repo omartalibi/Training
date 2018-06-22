@@ -1,4 +1,4 @@
-package IPRO.stock;
+package IPRO.cours.stock;
 
 public class Stylo extends Article {
     private Couleur couleur;

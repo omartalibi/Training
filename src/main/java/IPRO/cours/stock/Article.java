@@ -1,4 +1,4 @@
-package IPRO.stock;
+package IPRO.cours.stock;
 
 public abstract class Article implements Sellable{
     private String reference;
