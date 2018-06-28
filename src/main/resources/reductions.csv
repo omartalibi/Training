@@ -1,0 +1,8 @@
+#Lines that start with "#" are omitted
+#Format : SellableReference;PourcentageOfReduction in Double
+#Example : REF435345;10.0 (10% of reduction in sellable that has reference REF435345)
+
+#reference;PourcentReduction
+REF01010;50.0
+REF005435;50.0
+#REF005466;50.0
