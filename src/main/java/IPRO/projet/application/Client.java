@@ -2,6 +2,7 @@ package IPRO.projet.application;
 
 import IPRO.projet.typage.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import static IPRO.projet.typage.Prix.*;
@@ -11,13 +12,11 @@ public class Client extends Personne{
     private static int nextIdentifer = 0;
 
     private Id id;
-
     private Username username;
     private Password password;
     private Email email;
     private FirstName firstName;
     private LastName lastName;
-
     private List<Commande> commandeList = new ArrayList<>();
     private Prix prixTotal;
 
@@ -28,11 +27,10 @@ public class Client extends Personne{
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
-
         this.prixTotal = getPrixTotal();
     }
 
-    public Commande createCommande(ISellable...sellables){
+    public Commande createCommande(ISellable...sellables) throws IOException {
         Commande commande = new Commande(sellables);
         affectCommande(commande);
         return commande;
@@ -75,4 +73,26 @@ public class Client extends Personne{
                 ", prixTotal=" + prixTotal +
                 '}';
     }
+
+
+    public Username getUsername() {
+        return username;
+    }
+
+    public Password getPassword() {
+        return password;
+    }
+
+    public Email getEmail() {
+        return email;
+    }
+
+    public FirstName getFirstName() {
+        return firstName;
+    }
+
+    public LastName getLastName() {
+        return lastName;
+    }
+
 }

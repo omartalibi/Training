@@ -94,5 +94,9 @@ public class Boutique implements IGestion{
         return stock;
     }
 
+    public void addStock(Stock stock){
+        this.stock = stock;
+    }
+
 
 }

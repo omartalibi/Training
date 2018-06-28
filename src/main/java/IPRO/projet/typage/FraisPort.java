@@ -14,4 +14,10 @@ public class FraisPort {
     public Double getFraisPortValue() {
         return fraisPort;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(fraisPort);
+    }
+
 }

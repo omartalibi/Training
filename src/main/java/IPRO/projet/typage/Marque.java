@@ -15,4 +15,8 @@ public class Marque {
     public String toString() {
         return marque;
     }
+
+    public String getMarque() {
+        return marque;
+    }
 }

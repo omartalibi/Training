@@ -11,13 +11,15 @@ public class Article implements ISellable {
     private Marque marque;
     private Prix prixPublic;
     private Prix coutObtention;
+    private String type;
 
-    public Article(Reference reference, Name nom, Marque marque, Prix prixPublic, Prix coutObtention) throws IllegalFormatException {
+    public Article(Reference reference, Name nom, Marque marque, Prix prixPublic, Prix coutObtention, String type) throws IllegalFormatException {
         this.reference = reference;
         this.nom = nom;
         this.marque = marque;
         this.prixPublic = prixPublic;
         this.coutObtention = coutObtention;
+        this.type = type;
     }
 
     @Override
@@ -44,5 +46,18 @@ public class Article implements ISellable {
                 ", prixPublic=" + prixPublic +
                 ", coutObtention=" + coutObtention +
                 '}';
+    }
+
+
+    public Marque getMarque() {
+        return marque;
+    }
+
+    public Prix getCoutObtention() {
+        return coutObtention;
+    }
+
+    public String getType() {
+        return type;
     }
 }

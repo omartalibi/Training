@@ -19,4 +19,5 @@ public class Prix {
     public String toString() {
         return String.valueOf(prix);
     }
+
 }

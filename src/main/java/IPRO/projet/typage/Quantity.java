@@ -19,4 +19,5 @@ public class Quantity {
     public String toString() {
         return String.valueOf(quantity);
     }
+
 }

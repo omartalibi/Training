@@ -15,4 +15,8 @@ public class FirstName {
     public String toString() {
         return firstName;
     }
+
+    public String getFirstName() {
+        return firstName;
+    }
 }

@@ -15,4 +15,8 @@ public class Password {
     public String toString() {
         return password;
     }
+
+    public String getPassword() {
+        return password;
+    }
 }

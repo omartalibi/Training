@@ -2,7 +2,6 @@ package IPRO.projet.typage;
 
 import IPRO.projet.exception.IllegalFormatException;
 
-import java.util.List;
 
 public class Reference {
     private String reference;
@@ -30,4 +29,6 @@ public class Reference {
     public String toString() {
         return reference;
     }
+
+
 }

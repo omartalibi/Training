@@ -15,4 +15,8 @@ public class Username {
     public String toString() {
         return username;
     }
+
+    public String getUsername() {
+        return username;
+    }
 }

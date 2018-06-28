@@ -15,4 +15,8 @@ public class Email {
     public String toString() {
         return email;
     }
+
+    public String getEmail() {
+        return email;
+    }
 }
