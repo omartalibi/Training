@@ -1,9 +1,0 @@
-#Lines that start with "#" are omitted
-#Les frais de port sont en montant (euros)
-#Exemple : REF5435345;30 (30 euros de frais de port pour le sellable REF54...)
-
-#reference;montantFraisPort
-REF01010;5
-REF54534;10
-REF005435;4
-REF000887;1
