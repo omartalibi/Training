@@ -24,6 +24,7 @@
         <module>cours</module>
         <module>kata</module>
         <module>bigData</module>
+        <module>designPatterns</module>
     </modules>
     <dependencies>
         <dependency>
